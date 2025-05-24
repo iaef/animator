@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "es2020", // Electron supports modern JS
+    "module": "commonjs",
+    "outDir": "../dist-electron", // Output directory for Electron main/preload
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true, // In case you need to import JSON files
+    "isolatedModules": false // Typically true for Babel/TS projects, but for tsc compilation, false is fine
+  },
+  "include": [
+    "./main.ts",
+    "./preload.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "../node_modules" // Exclude project-level node_modules as well
+  ]
+}

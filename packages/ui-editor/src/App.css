@@ -1,0 +1,70 @@
+.App {
+  text-align: center;
+  padding: 10px;
+  font-family: sans-serif;
+}
+
+.App-header {
+  background-color: #282c34;
+  padding: 15px;
+  color: white;
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+
+.controls,
+.playback-controls {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+}
+
+.controls textarea {
+  display: block;
+  width: 95%;
+  min-height: 100px;
+  margin: 0 auto 10px auto;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  font-family: monospace;
+}
+
+.controls button,
+.playback-controls button {
+  margin: 5px;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.playback-controls button:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+.playback-controls button:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+#renderer-wrapper,
+#renderer-container {
+  margin: 20px auto;
+  border: 1px solid #ccc;
+  display: flex; /* For centering canvas if smaller than container */
+  justify-content: center;
+  align-items: center;
+  background-color: #fff; /* Give canvas a distinct background */
+}
+
+/* If RendererComponent.tsx is used and it has its own div, style it: */
+#canvas-renderer-mvp {
+  border: 1px solid #ddd;
+  margin: 10px auto;
+}

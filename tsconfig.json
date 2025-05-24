@@ -1,40 +1,29 @@
 {
-  "compileOnSave": true,
   "compilerOptions": {
-    "allowJs": false,
-    "declaration": true,
-    "declarationDir": "lib",
-    "jsx": "react",
+    "target": "es2016",
     "module": "commonjs",
-    "moduleResolution": "node",
-    "noImplicitAny": true,
-    "outDir": "lib",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "./lib", // Default output for any files not part of React app or Electron main
+    "rootDir": "./",   // Ensure TS can find all files
+    "baseUrl": ".",    // Important for path mapping
     "paths": {
-      "@admin-cli/*": ["packages/haiku-admin-cli/src/*"],
-      "@cli/*": ["packages/@haiku/cli/src/*"],
-      "@common/*": ["packages/haiku-common/src/*"],
-      "@core/*": ["packages/@haiku/core/src/*"],
-      "@creator/*": ["packages/haiku-creator/src/*"],
-      "@formats/*": ["packages/haiku-formats/src/*"],
-      "@plumbing/*": ["packages/haiku-plumbing/src/*"],
-      "@sdk-creator/*": ["packages/haiku-sdk-creator/src/*"],
-      "@sdk-inkstone/*": ["packages/@haiku/sdk-inkstone/src/*"],
-      "@testing/*": ["packages/haiku-testing/src/*"],
-      "@ui-common/*": ["packages/haiku-ui-common/src/*"]
-    },
-    "preserveConstEnums": true,
-    "rootDir": "src",
-    "sourceMap": true,
-    "suppressImplicitAnyIndexErrors": true,
-    "target": "ES6",
-    "types": [
-      "node"
-    ],
-    "typeRoots": [
-      "node_modules/@types/"
-    ]
+      "haiku-core-logic/*": ["packages/core-logic/src/*"],
+      "haiku-rendering-engine-canvas/*": ["packages/rendering-engine-canvas/src/*"],
+      "haiku-ui-editor/*": ["packages/ui-editor/src/*"],
+      "haiku-lottie-exporter/*": ["packages/lottie-exporter/src/*"],
+      "haiku-project-io/*": ["packages/project-io/src/*"]
+    }
   },
   "include": [
-    "packages/**/*.ts"
+    "src/**/*.ts", // Main React app (if not using ui-editor as entry)
+    "packages/**/*.ts" // Include all packages
+  ],
+  "exclude": [
+    "node_modules",
+    "dist", // Webpack output
+    "dist-electron" // Electron main/preload output
   ]
 }

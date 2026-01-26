@@ -38,7 +38,7 @@
     "haiku-serialization": "5.1.2",
     "haiku-timeline": "5.1.2",
     "haiku-ui-common": "5.1.2",
-    "lodash": "^4.17.4",
+    "lodash": "^4.17.23",
     "lodash.assign": "^4.2.0",
     "lodash.debounce": "4.0.8",
     "marked": "^0.3.17",

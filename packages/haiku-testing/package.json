@@ -23,7 +23,7 @@
   "dependencies": {
     "@types/node": "10.12.30",
     "@types/tape": "^4.2.32",
-    "sinon": "^5.0.10",
+    "sinon": "^16.1.2",
     "xml-js": "^1.6.4"
   },
   "devDependencies": {

@@ -30,7 +30,7 @@
     "haiku-fs-extra": "5.1.2",
     "haiku-serialization": "5.1.2",
     "haiku-ui-common": "5.1.2",
-    "lodash": "^4.17.4",
+    "lodash": "^4.17.23",
     "qs": "6.4.0",
     "radium": "0.18.1",
     "raven-js": "3.21.0",
